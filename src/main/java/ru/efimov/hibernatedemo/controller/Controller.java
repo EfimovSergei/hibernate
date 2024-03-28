@@ -27,4 +27,9 @@ public class Controller {
     public Optional<Person> findByNameAndSurname(@RequestParam String name, @RequestParam String surname){
         return repository.findByNameAndSurname(name,surname);
     }
+    @GetMapping("/persons/all")
+    public List<Person> findAll() {
+        return repository.findAll();
+    }
+
 }
